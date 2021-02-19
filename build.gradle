@@ -1,0 +1,58 @@
+plugins {
+    id 'java-library'
+    id 'org.jetbrains.kotlin.jvm' version '1.4.30'
+    id 'maven-publish'
+}
+
+group 'ovh.vicart.jweb'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    maven {
+        url 'http://192.168.1.155:8081/repository/maven-releases'
+    }
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib"
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+java {
+    withJavadocJar()
+    withSourcesJar()
+}
+
+publishing {
+    publications {
+        jweb(MavenPublication) {
+            from components.java
+        }
+    }
+
+    repositories {
+        maven {
+            name = 'releases'
+            url = 'http://192.168.1.155:8081/repository/maven-releases'
+            credentials {
+                username project.repoUser
+                password project.repoPassword
+            }
+        }
+
+        maven {
+            name = 'snapshots'
+            url = 'http://192.168.1.155:8081/repository/maven-snapshots'
+            credentials {
+                username project.repoUser
+                password project.repoPassword
+            }
+        }
+    }
+}
