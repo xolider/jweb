@@ -41,8 +41,8 @@ publishing {
             name = 'releases'
             url = 'http://192.168.1.155:8081/repository/maven-releases'
             credentials {
-                username System.properties['repoUser']
-                password System.properties['repoPassword']
+                username = System.getProperty('repoUser', '')
+                password = System.getProperty('repoPassword', '')
             }
         }
 
@@ -50,8 +50,8 @@ publishing {
             name = 'snapshots'
             url = 'http://192.168.1.155:8081/repository/maven-snapshots'
             credentials {
-                username System.properties['repoUser']
-                password System.properties['repoPassword']
+                username = System.getProperty('repoUser', '')
+                password = System.getProperty('repoPassword', '')
             }
         }
     }
