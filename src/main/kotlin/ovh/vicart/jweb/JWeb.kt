@@ -26,7 +26,7 @@ class JWebConfigurer internal constructor() {
     }
 
     fun withContextPath(path: String) : JWebConfigurer {
-        JWeb.contextPath = path
+        JWeb.contextPath = if(path == "/") "" else if(path.endsWith('/')) path.substring(0, path.length-1) else path
         return this
     }
 }
