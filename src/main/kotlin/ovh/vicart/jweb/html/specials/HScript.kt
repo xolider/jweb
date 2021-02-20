@@ -3,14 +3,14 @@ package ovh.vicart.jweb.html.specials
 import ovh.vicart.jweb.html.HTMLObject
 import java.net.URL
 
-class HScript(_src: String) : HTMLObject() {
+class HScript(_src: URL) : HTMLObject() {
 
     override var root: String = "script"
     override val closing: Boolean = true
 
-    var src: String = _src
+    var src: URL = _src
     set(value) {
-        attributes["src"] = value
+        attributes["src"] = value.toString()
         field = value
     }
 

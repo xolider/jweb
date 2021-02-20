@@ -45,4 +45,11 @@ abstract class HTMLObject {
 
         return builder.toString()
     }
+
+    fun reorderNodes(reorder: (HTMLObject) -> Int) {
+        for(node in innerNodes.copyOf()) {
+            val newPos = reorder(node)
+            innerNodes[newPos] = node
+        }
+    }
 }

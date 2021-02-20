@@ -23,9 +23,9 @@ class HTMLObjectTest {
     @Test
     fun test() {
         val page = WebPage("test")
-        val script = HScript("/js/test.js")
+        val script = HScript(this.javaClass.classLoader.getResource("js/test.js"))
         page.scripts.add(script)
-        page.links.add(HLink("stylesheet", "/css/test.css"))
+        page.links.add(HLink("stylesheet", this.javaClass.classLoader.getResource("css/test.css")))
         println(page.render())
         assert(true)
     }

@@ -1,8 +1,9 @@
 package ovh.vicart.jweb.html.specials
 
 import ovh.vicart.jweb.html.HTMLObject
+import java.net.URL
 
-class HLink(_rel: String, _href: String): HTMLObject() {
+class HLink(_rel: String, _href: URL): HTMLObject() {
 
     override var root: String = "link"
 
@@ -14,9 +15,9 @@ class HLink(_rel: String, _href: String): HTMLObject() {
             field = value
     }
 
-    var href: String = _href
+    var href: URL = _href
     set(value) {
-        attributes["href"] = value
+        attributes["href"] = value.toString()
         field = value
     }
 

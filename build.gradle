@@ -8,9 +8,8 @@ group 'ovh.vicart.jweb'
 version '1.0-SNAPSHOT'
 
 repositories {
-    mavenCentral()
     maven {
-        url 'http://192.168.1.155:8081/repository/maven-releases'
+        url 'http://maven.vicart.ovh/repository/maven-public'
     }
 }
 
@@ -39,7 +38,7 @@ publishing {
     repositories {
         maven {
             name = 'releases'
-            url = 'http://192.168.1.155:8081/repository/maven-releases'
+            url = 'http://maven.vicart.ovh/repository/maven-releases'
             credentials {
                 username project.repoUser
                 password project.repoPassword
@@ -48,7 +47,7 @@ publishing {
 
         maven {
             name = 'snapshots'
-            url = 'http://192.168.1.155:8081/repository/maven-snapshots'
+            url = 'http://maven.vicart.ovh/repository/maven-snapshots'
             credentials {
                 username project.repoUser
                 password project.repoPassword
