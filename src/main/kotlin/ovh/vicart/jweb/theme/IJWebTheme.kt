@@ -3,7 +3,7 @@ package ovh.vicart.jweb.theme
 import ovh.vicart.jweb.html.HTMLObject
 import java.net.URL
 
-interface JWebTheme {
+interface IJWebTheme {
 
     fun <T : HTMLObject> baseClasses(obj : T) : Array<String>
 

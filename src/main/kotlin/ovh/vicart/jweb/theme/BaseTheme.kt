@@ -4,7 +4,7 @@ import ovh.vicart.jweb.html.HTMLObject
 import ovh.vicart.jweb.html.widgets.HParagraph
 import java.net.URL
 
-class BaseTheme : JWebTheme {
+class BaseTheme : IJWebTheme {
 
 
     override fun <T : HTMLObject> baseClasses(obj: T): Array<String> {

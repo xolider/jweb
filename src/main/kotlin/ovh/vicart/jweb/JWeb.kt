@@ -1,12 +1,12 @@
 package ovh.vicart.jweb
 
 import ovh.vicart.jweb.theme.BaseTheme
-import ovh.vicart.jweb.theme.JWebTheme
+import ovh.vicart.jweb.theme.IJWebTheme
 
 class JWeb private constructor() {
 
     companion object {
-        var theme: JWebTheme = BaseTheme()
+        var theme: IJWebTheme = BaseTheme()
 
         var contextPath: String = ""
 
@@ -20,7 +20,7 @@ class JWeb private constructor() {
 
 class JWebConfigurer internal constructor() {
 
-    fun withTheme(theme: JWebTheme) : JWebConfigurer {
+    fun withTheme(theme: IJWebTheme) : JWebConfigurer {
         JWeb.theme = theme
         return this
     }

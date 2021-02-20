@@ -1,18 +1,22 @@
 package ovh.vicart.jweb.html
 
+import ovh.vicart.jweb.JWeb
+
 abstract class HTMLObject {
 
     abstract var root: String
 
     abstract val closing: Boolean
 
-    private val classes: MutableList<String> = mutableListOf()
+    val classes: MutableList<String> = JWeb.theme.baseClasses(this).toMutableList()
 
     val attributes: MutableMap<String, String> = mutableMapOf()
 
     var id: String? = null
 
     val innerNodes: Array<HTMLObject> = arrayOf()
+
+    val styles : MutableMap<String, String> = mutableMapOf()
 
     fun addClasses(vararg cssClasses: String) : HTMLObject {
         classes.addAll(cssClasses)
@@ -29,6 +33,13 @@ abstract class HTMLObject {
             builder.append(" class=\"")
             classes.forEach {
                 builder.append("$it ")
+            }
+            builder.append("\"")
+        }
+        if(styles.isNotEmpty()) {
+            builder.append(" style=\"")
+            styles.forEach {
+                builder.append("${it.key}: ${it.value}; ")
             }
             builder.append("\"")
         }
