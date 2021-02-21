@@ -2,7 +2,7 @@ package ovh.vicart.jweb.jweb.html.specials
 
 import ovh.vicart.jweb.jweb.html.HTMLObject
 
-class HMeta : HTMLObject() {
+open class HMeta : HTMLObject() {
 
     override var root: String = "meta"
 

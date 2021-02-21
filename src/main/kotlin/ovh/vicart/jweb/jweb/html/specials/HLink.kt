@@ -3,7 +3,7 @@ package ovh.vicart.jweb.jweb.html.specials
 import ovh.vicart.jweb.jweb.html.HTMLObject
 import java.net.URL
 
-class HLink(_rel: String, _href: URL): HTMLObject() {
+open class HLink(_rel: String, _href: URL): HTMLObject() {
 
     override var root: String = "link"
 
