@@ -12,7 +12,7 @@ class WebPage(var title: String) {
 
     val links: MutableList<HLink> = mutableListOf(HLink("stylesheet", JWeb.theme.layoutCssFile), HLink("stylesheet", JWeb.theme.cssFile))
 
-    private val base = File(javaClass.classLoader.getResource("base.html")!!.toURI()).readText()
+    private val base = File(javaClass.getResource("base.html").toURI()).readText()
 
     val body: MutableList<HTMLObject> = mutableListOf()
 
