@@ -10,4 +10,7 @@ interface IJWebTheme {
     val cssFile: URL
 
     val javascriptFile: URL?
+
+    val layoutCssFile: URL
+        get() = javaClass.classLoader.getResource("css/layouts.css")!!
 }

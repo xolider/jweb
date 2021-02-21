@@ -10,7 +10,7 @@ class WebPage(var title: String) {
 
     val metas: MutableList<HMeta> = mutableListOf()
 
-    val links: MutableList<HLink> = mutableListOf(HLink("stylesheet", JWeb.theme.cssFile))
+    val links: MutableList<HLink> = mutableListOf(HLink("stylesheet", JWeb.theme.layoutCssFile), HLink("stylesheet", JWeb.theme.cssFile))
 
     private val base = File(javaClass.classLoader.getResource("base.html")!!.toURI()).readText()
 

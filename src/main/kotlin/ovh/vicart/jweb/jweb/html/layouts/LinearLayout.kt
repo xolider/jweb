@@ -2,13 +2,16 @@ package ovh.vicart.jweb.jweb.html.layouts
 
 import ovh.vicart.jweb.jweb.html.HTMLObject
 
-open class LinearLayout : HTMLObject() {
+open class LinearLayout : AbstractLayout() {
 
-    override var root: String = "div"
+    enum class Orientation {
+        HORIZONTAL,
+        VERTICAL
+    }
 
-    override val closing: Boolean = true
+    var orientation: Orientation = Orientation.HORIZONTAL
 
     init {
-        addClasses("")
+        addClasses(if(orientation == Orientation.HORIZONTAL) "hlinear" else "vlinear")
     }
 }
