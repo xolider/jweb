@@ -1,9 +1,9 @@
-package ovh.vicart.jweb
+package ovh.vicart.jweb.jweb
 
-import ovh.vicart.jweb.html.HTMLObject
-import ovh.vicart.jweb.html.specials.HLink
-import ovh.vicart.jweb.html.specials.HMeta
-import ovh.vicart.jweb.html.specials.HScript
+import ovh.vicart.jweb.jweb.html.HTMLObject
+import ovh.vicart.jweb.jweb.html.specials.HLink
+import ovh.vicart.jweb.jweb.html.specials.HMeta
+import ovh.vicart.jweb.jweb.html.specials.HScript
 import java.io.File
 
 class WebPage(var title: String) {

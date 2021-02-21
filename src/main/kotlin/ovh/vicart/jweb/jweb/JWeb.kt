@@ -1,7 +1,7 @@
-package ovh.vicart.jweb
+package ovh.vicart.jweb.jweb
 
-import ovh.vicart.jweb.theme.BaseTheme
-import ovh.vicart.jweb.theme.IJWebTheme
+import ovh.vicart.jweb.jweb.theme.BaseTheme
+import ovh.vicart.jweb.jweb.theme.IJWebTheme
 
 class JWeb private constructor() {
 

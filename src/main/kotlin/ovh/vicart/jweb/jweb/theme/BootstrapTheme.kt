@@ -1,11 +1,10 @@
-package ovh.vicart.jweb.theme
+package ovh.vicart.jweb.jweb.theme
 
-import ovh.vicart.jweb.html.HTMLObject
-import ovh.vicart.jweb.html.widgets.HParagraph
+import ovh.vicart.jweb.jweb.html.HTMLObject
+import ovh.vicart.jweb.jweb.html.widgets.HParagraph
 import java.net.URL
 
-class BaseTheme : IJWebTheme {
-
+class BootstrapTheme : IJWebTheme {
 
     override fun <T : HTMLObject> baseClasses(obj: T): Array<String> {
         return when(obj) {
@@ -15,7 +14,9 @@ class BaseTheme : IJWebTheme {
     }
 
     override val cssFile: URL
-        get() = this.javaClass.classLoader.getResource("css/base.css")!!
+        get() = URL("")
     override val javascriptFile: URL?
         get() = null
+
+
 }

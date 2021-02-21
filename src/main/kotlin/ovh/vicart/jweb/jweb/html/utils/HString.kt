@@ -1,6 +1,6 @@
-package ovh.vicart.jweb.html.utils
+package ovh.vicart.jweb.jweb.html.utils
 
-import ovh.vicart.jweb.html.HTMLObject
+import ovh.vicart.jweb.jweb.html.HTMLObject
 
 open class HString(val text: String): HTMLObject() {
 

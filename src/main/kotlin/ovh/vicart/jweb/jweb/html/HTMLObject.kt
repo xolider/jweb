@@ -1,6 +1,6 @@
-package ovh.vicart.jweb.html
+package ovh.vicart.jweb.jweb.html
 
-import ovh.vicart.jweb.JWeb
+import ovh.vicart.jweb.jweb.JWeb
 
 abstract class HTMLObject {
 

@@ -1,4 +1,4 @@
-package ovh.vicart.jweb.html.widgets
+package ovh.vicart.jweb.jweb.html.widgets
 
 class HSmall(text: String) : HParagraph(text) {
 

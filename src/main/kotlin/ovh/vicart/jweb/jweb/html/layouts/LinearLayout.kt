@@ -1,6 +1,6 @@
-package ovh.vicart.jweb.html.layouts
+package ovh.vicart.jweb.jweb.html.layouts
 
-import ovh.vicart.jweb.html.HTMLObject
+import ovh.vicart.jweb.jweb.html.HTMLObject
 
 class LinearLayout : HTMLObject() {
 

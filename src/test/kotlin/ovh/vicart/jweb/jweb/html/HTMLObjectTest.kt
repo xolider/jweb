@@ -1,10 +1,10 @@
-package ovh.vicart.jweb.html
+package ovh.vicart.jweb.jweb.html
 
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
-import ovh.vicart.jweb.WebPage
-import ovh.vicart.jweb.html.specials.HLink
-import ovh.vicart.jweb.html.specials.HScript
+import ovh.vicart.jweb.jweb.WebPage
+import ovh.vicart.jweb.jweb.html.specials.HLink
+import ovh.vicart.jweb.jweb.html.specials.HScript
 
 class HTMLObjectTest {
 

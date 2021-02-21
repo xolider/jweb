@@ -1,7 +1,7 @@
-package ovh.vicart.jweb.html.widgets
+package ovh.vicart.jweb.jweb.html.widgets
 
-import ovh.vicart.jweb.html.HTMLObject
-import ovh.vicart.jweb.html.utils.HString
+import ovh.vicart.jweb.jweb.html.HTMLObject
+import ovh.vicart.jweb.jweb.html.utils.HString
 
 open class HParagraph(text: String) : HString(text) {
 

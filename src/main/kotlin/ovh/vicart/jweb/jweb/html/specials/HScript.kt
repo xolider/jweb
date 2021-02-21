@@ -1,6 +1,6 @@
-package ovh.vicart.jweb.html.specials
+package ovh.vicart.jweb.jweb.html.specials
 
-import ovh.vicart.jweb.html.HTMLObject
+import ovh.vicart.jweb.jweb.html.HTMLObject
 import java.net.URL
 
 class HScript(_src: URL) : HTMLObject() {

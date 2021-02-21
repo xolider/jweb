@@ -1,6 +1,6 @@
-package ovh.vicart.jweb.theme
+package ovh.vicart.jweb.jweb.theme
 
-import ovh.vicart.jweb.html.HTMLObject
+import ovh.vicart.jweb.jweb.html.HTMLObject
 import java.net.URL
 
 interface IJWebTheme {

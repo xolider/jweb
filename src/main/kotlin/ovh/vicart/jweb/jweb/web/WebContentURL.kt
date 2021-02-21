@@ -1,4 +1,4 @@
-package ovh.vicart.jweb.web
+package ovh.vicart.jweb.jweb.web
 
 import java.net.URL
 
