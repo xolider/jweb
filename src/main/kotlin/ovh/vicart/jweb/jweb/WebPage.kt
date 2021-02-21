@@ -5,6 +5,7 @@ import ovh.vicart.jweb.jweb.html.specials.HLink
 import ovh.vicart.jweb.jweb.html.specials.HMeta
 import ovh.vicart.jweb.jweb.html.specials.HScript
 import java.io.File
+import java.net.URL
 
 class WebPage(var title: String) {
 
@@ -12,7 +13,7 @@ class WebPage(var title: String) {
 
     val links: MutableList<HLink> = mutableListOf(HLink("stylesheet", JWeb.theme.layoutCssFile), HLink("stylesheet", JWeb.theme.cssFile))
 
-    private val base = File(javaClass.getResource("base.html").toURI()).readText()
+    private val base = File(URL("classpath:ovh/vicart/jweb/jweb/base.html").toURI()).readText()
 
     val body: MutableList<HTMLObject> = mutableListOf()
 
