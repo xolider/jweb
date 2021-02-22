@@ -1,6 +1,7 @@
 package ovh.vicart.jweb.jweb.html
 
 import ovh.vicart.jweb.jweb.JWeb
+import java.util.*
 
 abstract class HTMLObject {
 
@@ -14,7 +15,8 @@ abstract class HTMLObject {
 
     var id: String? = null
 
-    val innerNodes: Array<HTMLObject> = arrayOf()
+    var innerNodes: MutableList<HTMLObject> = mutableListOf()
+        private set
 
     val styles : MutableMap<String, String> = mutableMapOf()
 
@@ -58,9 +60,11 @@ abstract class HTMLObject {
     }
 
     fun reorderNodes(reorder: (HTMLObject) -> Int) {
-        for(node in innerNodes.copyOf()) {
+        val copy = innerNodes.toTypedArray()
+        for(node in innerNodes) {
             val newPos = reorder(node)
-            innerNodes[newPos] = node
+            copy[newPos] = node
         }
+        innerNodes = copy.toMutableList()
     }
 }
