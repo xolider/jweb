@@ -15,7 +15,7 @@ class BaseTheme : IJWebTheme {
     }
 
     override val cssFile: URL
-        get() = URL("classpath:ovh/vicart/jweb/jweb/theme/css/base.css")
+        get() = URL("https://jweb.vicart.ovh/base.css")
     override val javascriptFile: URL?
         get() = null
 }

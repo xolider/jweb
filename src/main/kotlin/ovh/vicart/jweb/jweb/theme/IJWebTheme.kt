@@ -12,5 +12,5 @@ interface IJWebTheme {
     val javascriptFile: URL?
 
     val layoutCssFile: URL
-        get() = URL("classpath:ovh/vicart/jweb/jweb/theme/css/layouts.css")
+        get() = URL("https://jweb.vicart.ovh/layout.css")
 }
